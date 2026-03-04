@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReviewArena - Compare</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <nav>
+        <a href="/" class="active">Compare</a>
+        <a href="/leaderboard.html">Leaderboard</a>
+    </nav>
+
+    <h2>Which review is better?</h2>
+    
+    <div class="container">
+        <div class="review-box">
+            <h3>Model A</h3>
+            <p id="review-a-text">Loading...</p>
+            <p id="model-a-name" class="reveal"></p>
+        </div>
+        <div class="review-box">
+            <h3>Model B</h3>
+            <p id="review-b-text">Loading...</p>
+            <p id="model-b-name" class="reveal"></p>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="btn-a" onclick="submitVote('A')">👈 Model A is better</button>
+        <button id="btn-tie" onclick="submitVote('tie')">🤝 Tie</button>
+        <button id="btn-b" onclick="submitVote('B')">Model B is better 👉</button>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

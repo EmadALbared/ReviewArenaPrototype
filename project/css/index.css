@@ -1,0 +1,81 @@
+:root {
+    --primary: #2563eb;
+    --bg-color: #f9fafb;
+    --card-bg: #ffffff;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+}
+
+body { 
+    font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0; 
+    padding: 0;
+    text-align: center; 
+}
+
+nav { 
+    background: var(--card-bg);
+    padding: 15px 30px; 
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+nav a { text-decoration: none; color: var(--text-muted); transition: color 0.2s; }
+nav a:hover { color: var(--primary); }
+nav a.active { color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 13px; }
+
+h2 { margin-top: 40px; font-weight: 600; color: var(--text-main); }
+
+.container { 
+    display: flex; 
+    justify-content: center; 
+    gap: 24px; 
+    max-width: 1200px; 
+    margin: 30px auto; 
+    padding: 0 20px;
+}
+
+.review-box { 
+    background: var(--card-bg); 
+    border: 1px solid var(--border-color); 
+    border-radius: 12px; 
+    padding: 30px; 
+    width: 100%; 
+    max-width: 500px;
+    text-align: left; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+}
+
+.review-box h3 { margin-top: 0; color: var(--text-muted); font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.buttons { margin-top: 40px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+button { 
+    background-color: var(--card-bg); 
+    border: 1px solid var(--border-color); 
+    color: var(--text-main);
+    padding: 12px 24px; 
+    font-size: 16px; 
+    font-weight: 500;
+    border-radius: 8px; 
+    cursor: pointer; 
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+button:hover:not(:disabled) { background-color: var(--bg-color); border-color: #d1d5db; transform: translateY(-1px); }
+button:active:not(:disabled) { transform: translateY(0); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.reveal { 
+    color: var(--primary); 
+    font-weight: 600; 
+    margin-top: 20px; 
+    padding-top: 15px;
+    border-top: 1px dashed var(--border-color);
+    display: none; 
+}
